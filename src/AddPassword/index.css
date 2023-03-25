@@ -1,0 +1,39 @@
+.list-item {
+  border: 1px solid #0b69ff;
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+}
+.initial {
+  background-color: #14b8a6;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  text-align: center;
+  color: #f8fafc;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Roboto';
+  align-self: center;
+}
+.details-list-item {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.website {
+  color: #f8fafc;
+  font-size: 15px;
+  font-family: 'Roboto';
+}
+.stars {
+  width: 150px;
+}
+.delete-icon {
+  width: 25px;
+  height: 25px;
+  color: green;
+  background-color: transparent;
+  align-self: center;
+}
