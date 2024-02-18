@@ -6,6 +6,16 @@ import AddPassword from '../AddPassword'
 
 import './index.css'
 
+const initialBackgroundColors = [
+  'red',
+  'green',
+  'blue',
+  'yellow',
+  'orange',
+  'lightblue',
+  'violet',
+]
+
 class PasswordManager extends Component {
   state = {
     websiteInput: '',
@@ -35,11 +45,15 @@ class PasswordManager extends Component {
   onAddPassword = event => {
     event.preventDefault()
     const {websiteInput, usernameInput, passwordInput} = this.state
+    const backgroundItem = Math.ceil(
+      Math.random() * initialBackgroundColors.length - 1,
+    )
     const newPassword = {
       id: uuidv4(),
       website: websiteInput,
       username: usernameInput,
       password: passwordInput,
+      backgroundColor: initialBackgroundColors[backgroundItem],
     }
     this.setState(prevState => ({
       passwordList: [...prevState.passwordList, newPassword],
